@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity("campaigns")
-export class CampaignEntity {
+@Entity("requests")
+export class RequestEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -12,11 +12,8 @@ export class CampaignEntity {
   description: string;
 
   @Column()
-  address: string;
+  value: string;
 
   @Column()
-  creator_address: string;
-
-  @Column("text", { array: true })
-  photos: string[];
+  to: string;
 }

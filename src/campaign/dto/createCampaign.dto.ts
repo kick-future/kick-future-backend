@@ -17,7 +17,4 @@ export class CreateCampaignDto {
 
   @Column("text", { array: true })
   photos: string[];
-
-  @Column("int", { array: true })
-  request_ids?: number[];
 }
